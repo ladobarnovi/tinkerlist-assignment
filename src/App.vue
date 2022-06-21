@@ -1,30 +1,30 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <AppHeader />
+  <div class="search-container">
+    <SearchInput />
+  </div>
   <router-view/>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+@import "./assets/styles/reset";
+@import "./assets/styles/global";
+@import "assets/styles/weather-card";
+
+html {
+  font-family: "Roboto";
+  background-color: #ebebeb;
+  color: #1f1f1f;
 }
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.search-container {
+  padding: 8px;
 }
 </style>
+<script>
+import AppHeader from '@/components/AppHeader'
+import SearchInput from '@/components/SearchInput'
+export default {
+  components: { SearchInput, AppHeader }
+}
+</script>

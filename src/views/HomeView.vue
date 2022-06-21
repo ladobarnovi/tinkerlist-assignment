@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <SearchHistory />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import HelloWorld from '@/components/HelloWorld.vue' // @ is an alias to /src
+import SearchInput from '@/components/SearchInput.vue'
+import SearchHistory from '@/components/SearchHistory.vue'
 
 export default defineComponent({
   name: 'HomeView',
   components: {
-    HelloWorld
+    SearchHistory
   }
 })
 </script>
+
+<style scoped lang="scss">
+.home {
+  padding: 8px
+}
+</style>
